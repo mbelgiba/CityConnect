@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: CityConnect
+  datasource:
+    url: jdbc:h2:file:./data/cityconnect;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  jackson:
+    default-property-inclusion: non_null
+cityconnect:
+  jwt-secret: ${CITYCONNECT_JWT_SECRET:local-development-signing-key-change-before-deploying-2026}

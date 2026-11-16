@@ -1,0 +1,9 @@
+target/
+password.md
+.env
+*.log
+*.pid
+data/
+uploads/
+*.mv.db
+*.trace.db
